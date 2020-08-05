@@ -1,5 +1,5 @@
 // <⚠️ DONT DELETE THIS ⚠️>
-import "./styles.css";
+// import "./styles.css";
 const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 // <⚠️ /DONT DELETE THIS ⚠️>
 
@@ -13,24 +13,32 @@ const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 ✅ ALL function handlers should be INSIDE of "superEventHandler"
 */
 
-const BASE_COLOR = colors[1];
+const title = document.querySelector("h2");
+
 const superEventHandler = {
-    resizeHandlers: function handleResize() {},
-    mouseoverHandlers: function handleMouseOver() {},
-    clickHandlers: function handleClicked() {},
+    resizeHandlers: function handleResize() {
+        title.style.color = colors[2];
+        title.innerText = "You just resized!";
+    },
+    mouseoverHandlers: function handleMouseOver() {
+        title.style.color = colors[0];
+        title.innerText = "The mouse is here!";
+    },
+    mouseoutHandlers: function handleMouseOut() {
+        title.style.color = colors[1];
+        title.innerText = "The mouse is gone!"
+    },
+    mouseclickHandlers: function handleMouseDown() {
+        title.style.color = colors[3];
+        title.innerText = "That was a right click!"
+    }
 };
 
-const title = document.querySelector("#h2");
-
 function handlers() {
-    title.style.color = BASE_COLOR;
-    title.addEventListener("resize", superEventHandler.resizeHandlers);
+    window.addEventListener("resize", superEventHandler.resizeHandlers);
     title.addEventListener("mouseover", superEventHandler.mouseoverHandlers);
-    // title.addEventListener("mousedown", superEventHandler.handleClicked);
+    title.addEventListener("mouseout", superEventHandler.mouseoutHandlers);
+    window.addEventListener("contextmenu", superEventHandler.mouseclickHandlers);
 }
 
-function init() {
-    handlers();
-}
-
-init();
+handlers();
