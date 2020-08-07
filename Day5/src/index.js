@@ -15,7 +15,7 @@ function getTime() {
     // console.log(remainDate);
 
     if (remainDate === 0) {
-        clockTitle.innerText = "Happy Christmas!"
+        clockTitle.innerText = "Today is Christmas eve!"
     } else {
         const day = Math.floor(remainDate / ((NINE_HOURS_MILLISECONDS / 9) * 24));
         const hours = Math.floor(remainDate / (NINE_HOURS_MILLISECONDS / 9) % 24);
