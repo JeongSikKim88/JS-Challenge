@@ -1,4 +1,4 @@
-import "./styles.css";
+// import "./styles.css";
 
 const select = document.querySelector(".js-select");
 

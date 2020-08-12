@@ -14,7 +14,7 @@ select.addEventListener('change', (e) => {
 })
 
 function loaddata() {
-    const select = document.querySelector('select')
+    // const select = document.querySelector('.js-select')
     const localdata = localStorage.getItem('country')
     console.log(localdata)
     if (localdata == "KR") {
