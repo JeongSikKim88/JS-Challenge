@@ -30,13 +30,14 @@ function handleSubmit(e) {
 
 function chRangeNum() {
     const number = rangeNum.value;
+    console.log(number);
     randNum.innerHTML = `Generate a number between 0 and ${number}`;
 }
 
 
 function init() {
     rangeNum.addEventListener("input", chRangeNum);
-    playBtn.addEventListener("submit", handleSubmit);
+    playBtn.addEventListener("click", handleSubmit);
 }
 
 init();
