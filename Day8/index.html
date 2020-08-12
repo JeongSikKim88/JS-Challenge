@@ -30,14 +30,14 @@
 
     <form id="js-form">
         <h4>Guess the number:
-            <input type="text" />
-            <button class="play-btn" type="button">
+            <input id="input-num" type="number" />
+            <button id="play-btn" type="button">
                 Play
             </button>
         </h4>
     </form>
 
-    <h4 id="choose-num"></h4>
+    <h4 id="choose-num">you chose: ${userNum}, the machine chose ${randomNum}</h4>
     <h4 id="result-game"></h4>
     <script src="src/index.js"></script>
 </body>

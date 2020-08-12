@@ -22,25 +22,25 @@ function savePendingTask(task) {
 }
 
 function findInFinished(taskId) {
-  return finishedTasks.find(function(task) {
+  return finishedTasks.find(function (task) {
     return task.id === taskId;
   });
 }
 
 function findInPending(taskId) {
-  return pendingTasks.find(function(task) {
+  return pendingTasks.find(function (task) {
     return task.id === taskId;
   });
 }
 
 function removeFromPending(taskId) {
-  pendingTasks = pendingTasks.filter(function(task) {
+  pendingTasks = pendingTasks.filter(function (task) {
     return task.id !== taskId;
   });
 }
 
 function removeFromFinished(taskId) {
-  finishedTasks = finishedTasks.filter(function(task) {
+  finishedTasks = finishedTasks.filter(function (task) {
     return task.id !== taskId;
   });
 }
@@ -122,10 +122,10 @@ function loadState() {
 }
 
 function restoreState() {
-  pendingTasks.forEach(function(task) {
+  pendingTasks.forEach(function (task) {
     paintPendingTask(task);
   });
-  finishedTasks.forEach(function(task) {
+  finishedTasks.forEach(function (task) {
     paintFinishedTask(task);
   });
 }
