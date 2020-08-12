@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
-  </head>
 
-  <body>
+<head>
+    <title>Parcel Sandbox</title>
+    <!-- <link rel="stylesheet" href="src/styles.css"> -->
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <h1>Random Number Game</h1>
+    <h3 id="js-randnum">Generate a number between 0 and 10</h3>
+    
+    <div>
+        <input type="range" id="range-number" name="range-slider" min="0" max="200" value="10" step="10">
+        <datalist id="tickmarks">
+            <option value="0"></option>
+            <option value="10"></option>
+            <option value="20"></option>
+            <option value="30"></option>
+            <option value="40"></option>
+            <option value="50"></option>
+            <option value="60"></option>
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
+        </datalist>
+    </div>
+
+    <form id="js-form">
+        <h4>Guess the number:
+            <input type="text" />
+            <button class="play-btn" type="button">
+                Play
+            </button>
+        </h4>
+    </form>
+
+    <h4 id="choose-num"></h4>
+    <h4 id="result-game"></h4>
     <script src="src/index.js"></script>
-  </body>
+</body>
+
 </html>
